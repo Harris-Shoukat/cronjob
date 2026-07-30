@@ -1,0 +1,17 @@
+{% extends "scheduler/base.html" %}
+
+{% block content %}
+
+<h2 class="mb-4">
+    Django Management Commands Project
+</h2>
+
+<a href="{% url 'users' %}" class="btn btn-primary">
+    Dummy Users
+</a>
+
+<a href="{% url 'datetimes' %}" class="btn btn-success">
+    Date Records
+</a>
+
+{% endblock %}
