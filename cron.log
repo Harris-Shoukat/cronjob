@@ -227,3 +227,57 @@ Converted IDs 41-50 PST -> UTC
 Converted IDs 51-60 PST -> UTC
 Converted IDs 61-70 PST -> UTC
 Converted IDs 71-80 PST -> UTC
+Traceback (most recent call last):
+  File "/home/hs/Desktop/Django_Projects/cronjob/manage.py", line 23, in <module>
+    main()
+  File "/home/hs/Desktop/Django_Projects/cronjob/manage.py", line 19, in main
+    execute_from_command_line(sys.argv)
+  File "/home/hs/Desktop/Django_Projects/cronjob/venv/lib/python3.10/site-packages/django/core/management/__init__.py", line 442, in execute_from_command_line
+    utility.execute()
+  File "/home/hs/Desktop/Django_Projects/cronjob/venv/lib/python3.10/site-packages/django/core/management/__init__.py", line 436, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/hs/Desktop/Django_Projects/cronjob/venv/lib/python3.10/site-packages/django/core/management/base.py", line 420, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/hs/Desktop/Django_Projects/cronjob/venv/lib/python3.10/site-packages/django/core/management/base.py", line 461, in execute
+    self.check(**check_kwargs)
+  File "/home/hs/Desktop/Django_Projects/cronjob/venv/lib/python3.10/site-packages/django/core/management/base.py", line 496, in check
+    all_issues = checks.run_checks(
+  File "/home/hs/Desktop/Django_Projects/cronjob/venv/lib/python3.10/site-packages/django/core/checks/registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/hs/Desktop/Django_Projects/cronjob/venv/lib/python3.10/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+  File "/home/hs/Desktop/Django_Projects/cronjob/venv/lib/python3.10/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+  File "/home/hs/Desktop/Django_Projects/cronjob/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 531, in check
+    for pattern in self.url_patterns:
+  File "/home/hs/Desktop/Django_Projects/cronjob/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/hs/Desktop/Django_Projects/cronjob/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 718, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/hs/Desktop/Django_Projects/cronjob/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/hs/Desktop/Django_Projects/cronjob/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/hs/Desktop/Django_Projects/cronjob/cronjob/urls.py", line 23, in <module>
+    path("", include("scheduler.urls")),
+  File "/home/hs/Desktop/Django_Projects/cronjob/venv/lib/python3.10/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/hs/Desktop/Django_Projects/cronjob/scheduler/urls.py", line 5, in <module>
+    path("", views.home, name="home"),
+AttributeError: module 'scheduler.views' has no attribute 'home'
